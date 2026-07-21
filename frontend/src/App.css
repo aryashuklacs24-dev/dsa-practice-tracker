@@ -1,0 +1,46 @@
+<input
+
+type="checkbox"
+
+checked={selected.some(
+
+    item=>
+
+    item.questionName===q.questionName
+
+)}
+
+onChange={(e)=>{
+
+    if(e.target.checked){
+
+        setSelected([
+
+            ...selected,
+
+            q
+
+        ]);
+
+    }
+
+    else{
+
+        setSelected(
+
+            selected.filter(
+
+                item=>
+
+                item.questionName
+                !==
+                q.questionName
+
+            )
+
+        );
+
+    }
+
+}}
+/>
